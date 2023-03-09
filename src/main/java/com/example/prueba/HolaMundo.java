@@ -1,5 +1,6 @@
 package com.example.prueba;
 
+import com.example.prueba.model.persona;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,9 +35,13 @@ public class HolaMundo {
     public String valor() {
         System.out.println("Ingrese su nombre");
         String nombre = sc.next();
+        System.out.println("Ingrese su edad");
         int edad = sc.nextInt();
+        System.out.println("Ingrese su telefono");
         int telefono = sc.nextInt();
+        System.out.println("Ingrese su id");
         int id = sc.nextInt();
+        System.out.println("Ingrese su altura");
         int altura = sc.nextInt();
         persona user = new persona(nombre, edad, telefono, id, altura);
 
