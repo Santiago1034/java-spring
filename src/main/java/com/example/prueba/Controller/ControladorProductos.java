@@ -17,8 +17,4 @@ public class ControladorProductos {
         return sp.mostrar();
     }
 
-    @GetMapping("/cantidad")
-    public int cantidad() {
-        return sp.cantidad();
-    }
 }
