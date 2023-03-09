@@ -1,6 +1,7 @@
 package com.example.prueba;
 
 import com.example.prueba.model.persona;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ import javax.swing.*;
 public class HolaMundo {
     Scanner sc = new Scanner(System.in);
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home() {
         return "<a href='suma'>suma<a><br>" +
                 "<a href='lista'>Arraylist<a>";
