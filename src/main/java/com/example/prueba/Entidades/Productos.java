@@ -54,6 +54,7 @@ public class Productos {
     }
 
     public double getTotal() {
+        total = cantidadStock * precio;
         return total;
     }
 
@@ -71,13 +72,12 @@ public class Productos {
 
     @Override
     public String toString() {
-        return "Productos{" +
-                "codigo=" + codigo +
+        return " -nro=" + codigo +
                 ", nombre='" + nombre + '\'' +
                 ", precio=" + precio +
                 ", cantidadStock=" + cantidadStock +
                 ", total=" + total +
-                ", cotegoria='" + cotegoria + '\'' +
-                '}';
+                ", cotegoria='" + cotegoria +
+                "<br>";
     }
 }
