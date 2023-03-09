@@ -11,37 +11,28 @@ import javax.swing.*;
 @RestController
 public class HolaMundo {
 
+    @RequestMapping("/")
+    public String home() {
+        return "<a href='suma'>suma<a><br>"+
+                "<a href='lista'>Arraylist<a>";
+    }
 
     @RequestMapping("/suma")
-    public int suma(){
+    public String suma(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite un numero");
         int num1 = sc.nextInt();
         System.out.println("Digite un numero");
         int num2 = sc.nextInt();
         int ope = num1 + num2;
-        return ope;
+        return "<a style='color:black' href='/'>Home<a>" + ope;
 
     }
 
 
     @RequestMapping("/lista")
-        public  ArrayList valor(){
-            int n=0;
-            Scanner sc = new Scanner(System.in);
-            ArrayList ar = new ArrayList();
-            System.out.println("digite el tamaño");
-            int tam = sc.nextInt();
-            while (n<tam){
-                System.out.println("Digite un numero");
-                int num1 = sc.nextInt();
-                System.out.println("Digite un numero");
-                int num2 = sc.nextInt();
-                int ope = num1 + num2;
-                ar.add(ope);
-                n=n+1;
-            }
-            return ar;
+        public String valor(){
+        
         }
     }
 
