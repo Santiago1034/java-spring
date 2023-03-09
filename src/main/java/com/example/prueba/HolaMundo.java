@@ -16,8 +16,12 @@ public class HolaMundo {
 
     @GetMapping("/")
     public String home() {
-        return "<a href='suma'>suma<a><br>" +
-                "<a href='lista'>Arraylist<a>";
+        return "<ul>" +
+                "<li><a href='suma'>suma</a></li><br>" +
+                "<li><a href='lista'>Arraylist</a></li><br>"+
+                "<li><a href='listado'>Listado de productos</a></li><br>"+
+                "<li><a href='cantidad'>Cantidad productos</a></li><br>"+
+                "<li><a href='cantidadtotal'>Precio total</a></li></ul>";
     }
 
     @RequestMapping("/suma")
@@ -27,7 +31,7 @@ public class HolaMundo {
         System.out.println("Digite un numero");
         int num2 = sc.nextInt();
         int ope = num1 + num2;
-        return "<a href='/'>Home<a><br>" + ope;
+        return "<a href='/'>Home</a><br>" + ope;
 
     }
 

@@ -1,22 +1,24 @@
 package com.example.prueba.Entidades;
 
 public class Productos {
-
     private int codigo;
     private String nombre;
     private double precio;
-    private int cantidad;
+    private int cantidadStock;
     private double total;
-    private String categoria;
+    private String cotegoria;
 
-
-    public Productos(int codigo, String nombre, double precio, int cantidad, double total, String categoria) {
+    public Productos(int codigo, String nombre, double precio, int cantidadStock, double total, String cotegoria) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
-        this.cantidad = cantidad;
+        this.cantidadStock = cantidadStock;
         this.total = total;
-        this.categoria = categoria;
+        this.cotegoria = cotegoria;
+    }
+
+    public Productos() {
+
     }
 
     public int getCodigo() {
@@ -43,15 +45,16 @@ public class Productos {
         this.precio = precio;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getCantidadStock() {
+        return cantidadStock;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setCantidadStock(int cantidadStock) {
+        this.cantidadStock = cantidadStock;
     }
 
     public double getTotal() {
+        total = cantidadStock * precio;
         return total;
     }
 
@@ -59,11 +62,22 @@ public class Productos {
         this.total = total;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCotegoria() {
+        return cotegoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCotegoria(String cotegoria) {
+        this.cotegoria = cotegoria;
+    }
+
+    @Override
+    public String toString() {
+        return " -nro=" + codigo +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", cantidadStock=" + cantidadStock +
+                ", total=" + total +
+                ", cotegoria='" + cotegoria +
+                "<br>";
     }
 }
