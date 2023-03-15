@@ -13,7 +13,7 @@ import javax.swing.*;
 public class HolaMundo {
     Scanner sc = new Scanner(System.in);
 
-    @RequestMapping("/sprign-boot-taller")
+    @RequestMapping("/spring-boot-taller")
     public String inicio() {
         return "<ul>" +
                 "<li><a href='suma'>suma</a></li><br>" +
@@ -28,7 +28,7 @@ public class HolaMundo {
         System.out.println("Digite un numero");
         int num2 = sc.nextInt();
         int ope = num1 + num2;
-        return "<a href='/sprign-boot-taller'>Home</a><br>" + ope;
+        return "<a href='/spring-boot-taller'>Home</a><br>" + ope;
 
     }
 
@@ -40,7 +40,7 @@ public class HolaMundo {
         System.out.println("Ingrese su edad");
         int edad = sc.nextInt();
         System.out.println("Ingrese su telefono");
-        int telefono = sc.nextInt();
+        String telefono = sc.next();
         System.out.println("Ingrese su id");
         int id = sc.nextInt();
         System.out.println("Ingrese su altura");
