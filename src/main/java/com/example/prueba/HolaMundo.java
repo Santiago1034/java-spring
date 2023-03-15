@@ -13,14 +13,12 @@ import javax.swing.*;
 public class HolaMundo {
     Scanner sc = new Scanner(System.in);
 
-    @RequestMapping("/")
-    public String home() {
+    @RequestMapping("/sprign-boot-taller")
+    public String inicio() {
         return "<ul>" +
                 "<li><a href='suma'>suma</a></li><br>" +
-                "<li><a href='lista'>Arraylist</a></li><br>"+
-                "<li><a href='listado'>Listado de productos</a></li><br>"+
-                "<li><a href='cantidad'>Cantidad productos</a></li><br>"+
-                "<li><a href='cantidadtotal'>Precio total</a></li></ul>";
+                "<li><a href='lista'>Arraylist</a></li><br>" +
+                "</ul>";
     }
 
     @RequestMapping("/suma")
@@ -30,7 +28,7 @@ public class HolaMundo {
         System.out.println("Digite un numero");
         int num2 = sc.nextInt();
         int ope = num1 + num2;
-        return "<a href='/'>Home</a><br>" + ope;
+        return "<a href='/sprign-boot-taller'>Home</a><br>" + ope;
 
     }
 
@@ -49,7 +47,7 @@ public class HolaMundo {
         int altura = sc.nextInt();
         persona user = new persona(nombre, edad, telefono, id, altura);
 
-        return "<a href='/'>Home</a><br>" +
+        return "<a href='/spring-boot-taller'>Home</a><br>" +
                 "<h2>Sus datos son: </h2><br>" +
                 user;
     }
