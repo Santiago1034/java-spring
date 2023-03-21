@@ -1,13 +1,13 @@
-package com.example.prueba.model;
+package com.example.prueba.Entidades;
 
-public class persona {
+public class Persona {
     private String nombre;
     private int edad;
     private String telefono;
     private int id;
     private int altura;
 
-    public persona(String nombre, int edad, String telefono, int id, int altura) {
+    public Persona(String nombre, int edad, String telefono, int id, int altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
@@ -15,7 +15,7 @@ public class persona {
         this.altura = altura;
     }
 
-    public persona() {
+    public Persona() {
     }
 
     public String getNombre() {

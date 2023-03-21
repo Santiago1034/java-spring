@@ -1,13 +1,10 @@
 package com.example.prueba;
 
-import com.example.prueba.model.persona;
+import com.example.prueba.Entidades.Persona;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-
-import javax.swing.*;
 
 @RestController
 public class HolaMundo {
@@ -45,7 +42,7 @@ public class HolaMundo {
         int id = sc.nextInt();
         System.out.println("Ingrese su altura");
         int altura = sc.nextInt();
-        persona user = new persona(nombre, edad, telefono, id, altura);
+        Persona user = new Persona(nombre, edad, telefono, id, altura);
 
         return "<a href='/spring-boot-taller'>Home</a><br>" +
                 "<h2>Sus datos son: </h2><br>" +
