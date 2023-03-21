@@ -11,7 +11,12 @@ public class ServicioSucursal {
         lista.add(new Sucursal(1,"cll 5ta c nro.20-24", "madrid", "3108765350", "julicmilo@gmail.com"));
     }
 
-    public ArrayList<Sucursal> Sucursales(){
+    public ArrayList<Sucursal> sucursales(){
         return lista;
+    }
+
+    public String agregarSucursal(Sucursal s) {
+        lista.add(s);
+        return "Registro Exitoso";
     }
 }

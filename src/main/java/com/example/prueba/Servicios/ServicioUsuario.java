@@ -15,7 +15,12 @@ public class ServicioUsuario {
 
     }
 
-    public ArrayList<Usuario> Listar() {
+    public ArrayList<Usuario> usuarios() {
         return lista;
+    }
+
+    public String agregarUsuario(Usuario u) {
+        lista.add(u);
+        return "Registro exitoso";
     }
 }

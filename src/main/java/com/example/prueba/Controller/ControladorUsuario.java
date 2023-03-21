@@ -2,9 +2,7 @@ package com.example.prueba.Controller;
 
 import com.example.prueba.Entidades.Usuario;
 import com.example.prueba.Servicios.ServicioUsuario;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -15,6 +13,11 @@ public class ControladorUsuario {
 
     @GetMapping("/lista-usuarios")
     public ArrayList<Usuario> listar() {
-        return u.Listar();
+        return u.usuarios();
+    }
+
+    @PostMapping("/insertar-usuario")
+    public String insertar(@RequestBody Usuario user) {
+        return u.agregarUsuario(user);
     }
 }
