@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ServicioUsuario {
-<<<<<<< HEAD
 
     ArrayList<Usuario> lista= new ArrayList<>();
 
@@ -16,18 +15,6 @@ public class ServicioUsuario {
         lista.add(new Usuario(10,"javier",LocalDate.of(2020,05,27),"javier@gmail.com","España"));
     }
 
-    public ArrayList<Usuario> listar(){
-        return lista;
-    }
-=======
-    ArrayList<Usuario> lista = new ArrayList<Usuario>();
-
-    public ServicioUsuario() {
-        lista.add(new Usuario(06,"Camilo","Peru", LocalDate.of(2023,02,28),"camilo@gmail.com"));
-        lista.add(new Usuario(07,"Anastacio","Lima", LocalDate.of(2022,06,10),"Anas@gmail.com"));
-        lista.add(new Usuario(8,"Federico","Mexico", LocalDate.of(2021,03,07),"Feder@gmail.com"));
-
-    }
 
     public ArrayList<Usuario> usuarios() {
         return lista;
@@ -48,5 +35,5 @@ public class ServicioUsuario {
         return u;
     }
 
->>>>>>> 5b3114aa0f459edb787093a227264445cbd2c957
+
 }

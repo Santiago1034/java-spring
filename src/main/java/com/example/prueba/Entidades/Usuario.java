@@ -3,8 +3,8 @@ package com.example.prueba.Entidades;
 import java.time.LocalDate;
 
 public class Usuario {
-<<<<<<< HEAD
-    private int is;
+
+    private int id;
     private String nombre;
 
     private LocalDate fecha;
@@ -14,27 +14,15 @@ public class Usuario {
 
 
     public Usuario(int is, String nombre, LocalDate fecha, String correo, String pais) {
-        this.is = is;
+        this.id = is;
         this.nombre = nombre;
         this.fecha = fecha;
         this.correo = correo;
         this.pais = pais;
     }
 
-    public int getIs() {
-        return is;
-    }
 
-    public void setIs(int is) {
-        this.is = is;
-=======
-    private int id;
-    private String nombre;
-    private String pais;
-    private LocalDate fecha;
-    private String correo;
-
-    public Usuario(Integer id, String nombre, String pais, LocalDate fecha, String correo) {
+    public Usuario(int id, String nombre, String pais, LocalDate fecha, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
@@ -52,7 +40,7 @@ public class Usuario {
 
     public void setId(Integer id) {
         this.id = id;
->>>>>>> 5b3114aa0f459edb787093a227264445cbd2c957
+
     }
 
     public String getNombre() {
@@ -63,8 +51,7 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-<<<<<<< HEAD
-=======
+
     public String getPais() {
         return pais;
     }
@@ -73,7 +60,6 @@ public class Usuario {
         this.pais = pais;
     }
 
->>>>>>> 5b3114aa0f459edb787093a227264445cbd2c957
     public LocalDate getFecha() {
         return fecha;
     }
@@ -90,14 +76,8 @@ public class Usuario {
         this.correo = correo;
     }
 
-<<<<<<< HEAD
-    public String getPais() {
-        return pais;
-    }
 
-    public void setPais(String pais) {
-        this.pais = pais;
-=======
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -107,6 +87,6 @@ public class Usuario {
                 ", fecha=" + fecha +
                 ", correo='" + correo + '\'' +
                 '}';
->>>>>>> 5b3114aa0f459edb787093a227264445cbd2c957
+
     }
 }

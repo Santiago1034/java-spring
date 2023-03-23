@@ -1,27 +1,20 @@
 package com.example.prueba;
 
-<<<<<<< HEAD
 import com.example.prueba.Entidades.Persona;
-=======
-import com.example.prueba.model.persona;
-import org.springframework.web.bind.annotation.GetMapping;
->>>>>>> 5a70e3c5719726d1666115c91fbebe15e5c6137a
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.swing.*;
 
 @RestController
 public class HolaMundo {
     Scanner sc = new Scanner(System.in);
 
-<<<<<<< HEAD
     @RequestMapping("/spring-boot-taller")
     public String inicio() {
-=======
-    @GetMapping("/")
-    public String home() {
->>>>>>> 5a70e3c5719726d1666115c91fbebe15e5c6137a
         return "<ul>" +
                 "<li><a href='suma'>suma</a></li><br>" +
                 "<li><a href='lista'>Arraylist</a></li><br>" +
@@ -59,4 +52,3 @@ public class HolaMundo {
                 user;
     }
 }
-
