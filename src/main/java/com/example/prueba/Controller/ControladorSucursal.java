@@ -29,7 +29,7 @@ public class ControladorSucursal {
         return sc.buscarSucursal(json);
     }
 
-    @GetMapping("/eliminarSucursal/{cod}")
+    @DeleteMapping("/eliminarSucursal/{cod}")
     public String eliminar(@PathVariable("cod") int codigo) {
         return sc.eliminarSucursal(codigo);
     }
