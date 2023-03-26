@@ -1,11 +1,9 @@
 package com.example.prueba.Servicios;
 
 import com.example.prueba.Entidades.Sucursal;
-import com.example.prueba.Entidades.Usuario;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 
 import java.util.ArrayList;
 
@@ -68,40 +66,30 @@ public class ServicioSucursal {
                     }
                 }
         }catch (JsonProcessingException e){
-            e.printStackTrace();
+            System.out.println(e);
         }
         return mostrar;
     }
 
-    public String actualizarSucursal(String json) {
-        String mensaje = "No se actualizo el producto";
-        JsonNode node = null;
-        ObjectMapper mapper = new ObjectMapper();
-        try {
-            node = mapper.readTree(json);
-            System.out.println(node);
-            for (Sucursal u: lista){
-                if (u.getCodigo() == node.get("codigo").asInt()){
-                    Sucursal s = new Sucursal(node.get("codigo").asInt(),node.get("direccion").asText(),node.get("ciudad").asText(),node.get("telefono").asText(),node.get("correo").asText());
-                    lista.remove(u);
-                    lista.add(s);
-                }
+    public String actualizarSucursal(int codigo, Sucursal s) {
+        String mensaje = "No se actualizo la sucursal";
+        for (Sucursal S:lista){
+            if (S.getCodigo() == codigo){
+                lista.remove(S);
+                lista.add(s);
+                mensaje = "La sucursal con el codigo " + codigo + " se acutalizo correctamente";
+                break;
             }
-            mensaje = "Se actualizo el producto";
-        }catch (JsonProcessingException e) {
-            mensaje = "error al actualizar el producto " + e;
-            e.printStackTrace();
         }
-
         return mensaje;
     }
 
     public String eliminarSucursal(int Codigo) {
-        String mensaje = "No se encontro el producto con el codigo " + Codigo;
+        String mensaje = "No se encontro la sucursal con el codigo " + Codigo;
         for (Sucursal u : lista) {
             if (u.getCodigo() == Codigo) {
                 lista.remove(u);
-                mensaje = "Se elimino el producto con el codigo " + Codigo;
+                mensaje = "Se elimino la sucursal con el codigo " + Codigo;
                 break;
             }
         }

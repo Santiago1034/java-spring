@@ -24,18 +24,19 @@ public class ControladorSucursal {
         return sc.agregarSucursal(s);
     }
 
-    @GetMapping("/buscarSucursal/{datos}")
+    @GetMapping("/buscar-sucursal/{datos}")
     public ArrayList<Sucursal> buscar(@PathVariable("datos") String json){
         return sc.buscarSucursal(json);
     }
 
-    @DeleteMapping("/eliminarSucursal/{cod}")
+    @DeleteMapping("/eliminar-sucursal/{cod}")
     public String eliminar(@PathVariable("cod") int codigo) {
         return sc.eliminarSucursal(codigo);
     }
 
-    @GetMapping("/actualizarSucursal/{Suc}")
-    public String actualizar(@PathVariable("Suc") String jsonuser){
-        return sc.actualizarSucursal(jsonuser);
+    @PutMapping("/actualizar-sucursal/{cod}")
+    public String actualizar(@PathVariable("cod") int Codigo, @RequestBody Sucursal s){
+        System.out.println(s);
+        return sc.actualizarSucursal(Codigo,s);
     }
 }
