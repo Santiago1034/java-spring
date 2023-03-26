@@ -24,8 +24,14 @@ public class ServicioPersona {
     }
 
     public String eliminarPersona(int codigo) {
-        lista.clear();
-        return "Eliminacion exitosa";
+        String mensaje = "no existe esta persona" + codigo;
+        for(Persona pe : lista){
+            if (pe.getId() == codigo){
+                lista.remove(pe);
+                mensaje = "Eliminacion exitosa";
+            }
+        }
+        return mensaje;
 
     }
 

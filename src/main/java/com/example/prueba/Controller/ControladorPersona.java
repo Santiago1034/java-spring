@@ -27,4 +27,6 @@ public class ControladorPersona {
     public Persona buscar(@PathVariable("cod") int codigo ){
         return sp.buscarPersona(codigo);
     }
+
+
 }
