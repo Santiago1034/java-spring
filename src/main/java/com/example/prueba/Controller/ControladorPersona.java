@@ -5,7 +5,7 @@ import com.example.prueba.Servicios.ServicioPersona;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-
+@RestController
 public class ControladorPersona {
     ServicioPersona sp = new ServicioPersona();
     @GetMapping("/personas")

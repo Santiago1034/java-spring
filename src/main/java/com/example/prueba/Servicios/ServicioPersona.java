@@ -40,8 +40,5 @@ public class ServicioPersona {
         return prn;
     }
 
-    public String consultarTodaLista(Persona pc) {
-        System.out.println(lista);
-        return "No hay mas datos";
-    }
+
 }
