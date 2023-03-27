@@ -28,5 +28,6 @@ public class ControladorPersona {
         return sp.buscarPersona(codigo);
     }
 
-
+    @PutMapping("/actualizar-persona/{cod}")
+    public  String actualizar(@PathVariable("cod") int codigo,@RequestBody String jsonuser){return sp.actualizarPersona(jsonuser,codigo);}
 }

@@ -28,8 +28,8 @@ public class ServicioPersona {
 
     public String eliminarPersona(int codigo) {
         String mensaje = "no existe esta persona" + codigo;
-        for(Persona pe : lista){
-            if (pe.getId() == codigo){
+        for (Persona pe : lista) {
+            if (pe.getId() == codigo) {
                 lista.remove(pe);
                 mensaje = "Eliminacion exitosa";
             }
@@ -39,31 +39,34 @@ public class ServicioPersona {
     }
 
     public Persona buscarPersona(int codigo) {
-        Persona prn =null;
+        Persona prn = null;
 
         for (Persona p : lista) {
-            if(p.getId() == codigo){
+            if (p.getId() == codigo) {
                 prn = p;
             }
         }
         return prn;
     }
-    public String actualizarPersona(String json) {
+
+    public String actualizarPersona(String json, int codigo) {
         String mensaje = "No se actualizo la persona";
         JsonNode node = null;
         ObjectMapper mapper = new ObjectMapper();
         try {
             node = mapper.readTree(json);
             System.out.println(node);
-            for (Persona pa: lista){
-                if (pa.getId() == node.get("codigo").asInt()){
-                    Persona pn = new Persona(node.get("nombre").asText(),node.get("edad").asInt(),node.get("telefono").asText(),node.get("id").asInt(),node.get("altura").asInt());
+            for (Persona pa : lista) {
+                if (pa.getId() == codigo) {
+                    Persona pn = new Persona(node.get("nombre").asText(), node.get("edad").asInt(), node.get("telefono").asText(), node.get("id").asInt(), node.get("altura").asInt());
                     lista.remove(pa);
                     lista.add(pn);
+                    break;
                 }
             }
+
             mensaje = "Se actualizo la persona";
-        }catch (JsonProcessingException e) {
+        } catch (JsonProcessingException e) {
             mensaje = "error al actualizar" + e;
             e.printStackTrace();
         }
