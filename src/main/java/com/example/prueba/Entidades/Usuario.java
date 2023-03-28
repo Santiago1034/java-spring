@@ -3,13 +3,26 @@ package com.example.prueba.Entidades;
 import java.time.LocalDate;
 
 public class Usuario {
-    private String id;
-    private String nombre;
-    private String pais;
-    private LocalDate fecha;
-    private String correo;
 
-    public Usuario(String id, String nombre, String pais, LocalDate fecha, String correo) {
+    private int id;
+    private String nombre;
+
+    private LocalDate fecha;
+
+    private String correo;
+    private String pais;
+
+
+    public Usuario(int is, String nombre, LocalDate fecha, String correo, String pais) {
+        this.id = is;
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.correo = correo;
+        this.pais = pais;
+    }
+
+
+    public Usuario(int id, String nombre, String pais, LocalDate fecha, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.pais = pais;
@@ -21,12 +34,13 @@ public class Usuario {
 
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
+
     }
 
     public String getNombre() {
@@ -36,6 +50,7 @@ public class Usuario {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 
     public String getPais() {
         return pais;
@@ -61,6 +76,8 @@ public class Usuario {
         this.correo = correo;
     }
 
+
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -70,5 +87,6 @@ public class Usuario {
                 ", fecha=" + fecha +
                 ", correo='" + correo + '\'' +
                 '}';
+
     }
 }
