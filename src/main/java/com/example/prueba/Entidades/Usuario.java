@@ -3,6 +3,7 @@ package com.example.prueba.Entidades;
 import java.time.LocalDate;
 
 public class Usuario {
+<<<<<<< HEAD
 
     private int id;
     private String nombre;
@@ -22,6 +23,14 @@ public class Usuario {
     }
 
 
+=======
+    private int id;
+    private String nombre;
+    private String pais;
+    private LocalDate fecha;
+    private String correo;
+
+>>>>>>> b799d779f4a74b2a31a1f7eee8e90866c92459f5
     public Usuario(int id, String nombre, String pais, LocalDate fecha, String correo) {
         this.id = id;
         this.nombre = nombre;
@@ -34,6 +43,7 @@ public class Usuario {
 
     }
 
+<<<<<<< HEAD
     public Integer getId() {
         return id;
     }
@@ -46,6 +56,13 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
+=======
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {this.id = id;}
+>>>>>>> b799d779f4a74b2a31a1f7eee8e90866c92459f5
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

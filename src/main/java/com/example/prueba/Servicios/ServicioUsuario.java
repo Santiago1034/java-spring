@@ -7,7 +7,14 @@ import java.util.ArrayList;
 
 public class ServicioUsuario {
 
+<<<<<<< HEAD
     ArrayList<Usuario> lista= new ArrayList<>();
+=======
+    public ServicioUsuario() {
+        lista.add(new Usuario(6,"Camilo","Peru", LocalDate.of(2023,02,28),"camilo@gmail.com"));
+        lista.add(new Usuario(7,"Anastacio","Lima", LocalDate.of(2022,06,10),"Anas@gmail.com"));
+        lista.add(new Usuario(8,"Federico","Mexico", LocalDate.of(2021,03,07),"Feder@gmail.com"));
+>>>>>>> b799d779f4a74b2a31a1f7eee8e90866c92459f5
 
     public ServicioUsuario(){
         lista.add(new Usuario(10,"luisa",LocalDate.of(2023,2,28),"luisa@gmail.com","Colombia"));
@@ -26,6 +33,7 @@ public class ServicioUsuario {
     }
 
     public Usuario buscarUsuario(int codigo){
+<<<<<<< HEAD
         Usuario u=new Usuario();
         for(Usuario us: lista){
             if(u.getId() == codigo ){
@@ -36,4 +44,13 @@ public class ServicioUsuario {
     }
 
 
+=======
+        Usuario u = new Usuario();
+        for (Usuario us : lista){
+            if (u.getId() == codigo){
+                u=us;
+            }
+        }return u;
+    }
+>>>>>>> b799d779f4a74b2a31a1f7eee8e90866c92459f5
 }
