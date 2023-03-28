@@ -20,4 +20,10 @@ public class ControladorUsuario {
     public String insertar(@RequestBody Usuario user) {
         return u.agregarUsuario(user);
     }
+
+    @GetMapping("/buscarUsuario/{cod}")
+        public Usuario buscarUsuario(@PathVariable("cod")int codigo){
+        return u.buscarUsuario(codigo);
+    }
+
 }
